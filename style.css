@@ -25,15 +25,12 @@ main {
 
 .hero-header {
     position: relative;
-    min-height: 70vh;
+    height: 70vh;
+    min-height: 420px;
     background-image: url("images/tap_hero_8.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    text-align: center;
     filter: brightness(1.04) saturate(1.02);
 }
 
@@ -41,51 +38,49 @@ main {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(20, 63, 56, 0.15);
+    background: rgba(20, 63, 56, 0.12);
     z-index: 1;
 }
 
+/* Overlay fills the entire hero — all children position relative to it */
 .hero-overlay {
-    position: relative;
+    position: absolute;
+    inset: 0;
     z-index: 2;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
     color: white;
-    text-align: center;
 }
 
+/* Title + subtitle: vertically centered, slightly above mid to account for nav bar */
 .hero-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .hero-title {
     font-family: 'Lora', serif;
     font-size: clamp(3rem, 8vw, 5.5rem);
     font-weight: 600;
-    margin-bottom: 0.75rem;
+    margin: 0 0 0.5rem;
     letter-spacing: 0.02em;
-    text-shadow: 0 2px 12px rgba(20, 63, 56, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 16px rgba(20, 63, 56, 0.6), 0 1px 4px rgba(0, 0, 0, 0.25);
     color: #ffffff;
 }
 
 .hero-subtitle {
     font-family: 'Lora', serif;
-    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-size: clamp(0.95rem, 2.2vw, 1.3rem);
     font-weight: 400;
     font-style: italic;
     margin: 0;
-    color: #f0f5f3;
-    text-shadow: 0 1px 6px rgba(20, 63, 56, 0.4);
-    max-width: 600px;
-    letter-spacing: 0.03em;
+    color: rgba(240, 245, 243, 0.92);
+    text-shadow: 0 1px 8px rgba(20, 63, 56, 0.5);
+    letter-spacing: 0.04em;
 }
 
 .hero-title a {
@@ -97,57 +92,74 @@ main {
    Navigation
    ============================ */
 
+/* Desktop nav: frosted green bar pinned to bottom of hero */
 .hero-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
-    gap: 2rem;
-    margin-bottom: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: rgba(20, 63, 56, 0.78);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .hero-nav a {
-    color: white;
+    color: #E6ECE9;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: 500;
-    transition: color 0.3s ease;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 1rem 1.75rem;
+    border-right: 1px solid rgba(230, 236, 233, 0.15);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.hero-nav a:last-child {
+    border-right: none;
 }
 
 .hero-nav a:hover {
-    text-decoration: underline;
-    color: #E6ECE9;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
 }
 
+/* Hamburger: top-right, semi-transparent green pill */
 .hamburger {
     display: none;
     position: absolute;
-    top: 2rem;
-    right: 2rem;
-    width: 28px;
-    height: 28px;
-    cursor: pointer;
+    top: 1.25rem;
+    right: 1.25rem;
     z-index: 3;
-    background: transparent;
-    border: none;
+    background: rgba(20, 63, 56, 0.6);
+    border: 1px solid rgba(230, 236, 233, 0.25);
+    border-radius: 8px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
     padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .hamburger span {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 4px;
+    display: block;
+    width: 20px;
+    height: 2px;
     background: white;
     border-radius: 2px;
     transform-origin: center;
     transition: all 0.3s ease;
 }
 
-.hamburger span:nth-child(1) { top: 8px; }
-.hamburger span:nth-child(2) { top: 16px; }
-.hamburger span:nth-child(3) { top: 24px; }
-
 .hamburger.active span:nth-child(1) {
-    top: 16px;
-    transform: rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -155,32 +167,33 @@ main {
 }
 
 .hamburger.active span:nth-child(3) {
-    top: 16px;
-    transform: rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
 }
 
+/* Mobile dropdown */
 .mobile-nav {
-    flex-direction: column;
     position: absolute;
-    top: 80px;
-    right: 24px;
-    background: #1f4f47;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(20, 63, 56, 0.4);
+    top: 4.5rem;
+    right: 1.25rem;
     z-index: 3;
+    background: rgba(20, 63, 56, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(230, 236, 233, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(20, 63, 56, 0.5);
+    min-width: 200px;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
+    transform: translateY(-8px);
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 }
 
 .mobile-nav.open {
-    max-height: 500px;
+    max-height: 400px;
     opacity: 1;
     transform: translateY(0);
 }
@@ -188,13 +201,21 @@ main {
 .mobile-nav a {
     color: #E6ECE9;
     text-decoration: none;
-    padding: 0.5rem 0;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.875rem;
     font-weight: 500;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid rgba(230, 236, 233, 0.1);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.mobile-nav a:last-child {
+    border-bottom: none;
 }
 
 .mobile-nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
-    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -203,7 +224,7 @@ main {
     }
 
     .hamburger {
-        display: block;
+        display: flex;
     }
 }
 
