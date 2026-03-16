@@ -20,6 +20,10 @@
     <meta name="robots" content="all">
     <link rel="canonical" href="https://tapestral.com/designer-access.html">
     <link rel="icon" href="https://www.tapestral.com/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -36,211 +40,6 @@
     <meta name="twitter:image" content="https://tapestral.com/images/tapestral_brand.png">
 
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        .site-wrapper {
-            min-height: 100vh;
-            background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
-        }
-
-        main {
-            padding-top: 0;
-        }
-
-        /* Hero Section */
-        .hero-header {
-            position: relative;
-            height: 70vh;
-            background-image: url("images/tap_hero_8.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .hero-header::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.35);
-            z-index: 1;
-        }
-
-        .hero-overlay {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2rem;
-            color: white;
-            text-align: center;
-        }
-
-        .hero-center {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            flex-grow: 1;
-        }
-
-        .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-            color: #f1f1f1;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin: 0;
-            color: #f5f5f5;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
-            max-width: 800px;
-        }
-
-
-        .hero-title a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        /* Desktop Nav */
-        .hero-nav {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero-nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .hero-nav a:hover {
-            text-decoration: underline;
-            color: #ffcc00;
-        }
-
-        .hamburger {
-            display: none;
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            width: 28px;
-            height: 28px;
-            cursor: pointer;
-            z-index: 3;
-            background: transparent;
-            border: none;
-            padding: 0;
-        }
-
-        .hamburger span {
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: white;
-            border-radius: 2px;
-            transform-origin: center;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger span:nth-child(1) {
-            top: 8px;
-        }
-
-        .hamburger span:nth-child(2) {
-            top: 16px;
-        }
-
-        .hamburger span:nth-child(3) {
-            top: 24px;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            top: 16px;
-            transform: rotate(45deg);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            top: 16px;
-            transform: rotate(-45deg);
-        }
-
-
-        .mobile-nav {
-            flex-direction: column;
-            position: absolute;
-            top: 80px;
-            right: 24px;
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            z-index: 3;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .mobile-nav.open {
-            max-height: 500px;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .mobile-nav a {
-            color: black;
-            text-decoration: none;
-            padding: 0.5rem 0;
-            font-weight: 500;
-        }
-
-        .mobile-nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-nav {
-                display: none;
-            }
-
-            .hamburger {
-                display: block;
-            }
-        }
-
-        /* Form Section */
         main {
             max-width: 900px;
             margin: 2rem auto;
@@ -252,53 +51,19 @@
             margin-top: 40px;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #222;
+            color: #1f4f47;
         }
 
         .designer-hero {
             padding: 80px 20px;
             text-align: center;
-            position: relative;
-        }
-
-        .designer-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            z-index: 1;
         }
 
         .designer-title {
-            position: relative;
-            z-index: 2;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Lora', serif;
             font-size: 48px;
             margin-bottom: 12px;
-        }
-
-
-        .highlight-box {
-            background: #fafafa;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .highlight-box h3 {
-            margin-top: 0;
-            font-size: 20px;
-            color: #111;
-        }
-
-        .highlight-box ul {
-            margin: 12px 0 0;
-            padding-left: 20px;
-        }
-
-        .highlight-box ul li {
-            margin-bottom: 10px;
-            color: #555;
+            color: #1f4f47;
         }
 
         .form-wrapper {
@@ -313,47 +78,6 @@
             min-height: 1600px;
             border: none;
             display: block;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #f1f1f1;
-            color: #333;
-            padding: 24px 16px;
-            border-top: 1px solid #ddd;
-            margin-top: 48px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 12px;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            justify-content: center;
-        }
-
-        .footer-links a {
-            color: #333;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-copy {
-            font-size: 12px;
-            color: #666;
         }
     </style>
 </head>
