@@ -322,6 +322,41 @@ main {
     color: #ffffff;
 }
 
+.shipping-options {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.shipping-option {
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(230, 236, 233, 0.22);
+    border-radius: 12px;
+    padding: 1.75rem 2rem;
+    flex: 1 1 260px;
+    max-width: 320px;
+    text-align: left;
+}
+
+.shipping-option p {
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: rgba(230, 236, 233, 0.8);
+    margin: 0;
+}
+
+.shipping-option-divider {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(230, 236, 233, 0.4);
+    flex-shrink: 0;
+}
+
 .shipping-features {
     display: flex;
     flex-wrap: wrap;
