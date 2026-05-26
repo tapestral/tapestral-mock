@@ -5,7 +5,7 @@
 :root {
   --bg:          #F9F7F4;
   --bg-muted:    #EDECE6;
-  --bg-dark:     #233027;
+  --bg-dark:     #0E2B1A;
   --text:        #1C3329;
   --text-muted:  #587067;
   --text-light:  #F5F3EE;
@@ -35,7 +35,7 @@ a   { text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(35, 48, 39, 0.97);
+  background: rgba(14, 43, 26, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(196, 168, 130, 0.15);
@@ -114,7 +114,7 @@ a   { text-decoration: none; }
   top: 64px;
   right: 1rem;
   z-index: 99;
-  background: rgba(35, 48, 39, 0.98);
+  background: rgba(14, 43, 26, 0.98);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(196, 168, 130, 0.2);
@@ -784,7 +784,7 @@ a   { text-decoration: none; }
 
 .founder-avatar {
   height: 12rem;
-  background: linear-gradient(135deg, var(--bg-dark), rgba(35,48,39,0.60));
+  background: linear-gradient(135deg, var(--bg-dark), rgba(14,43,26,0.60));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -980,6 +980,79 @@ blockquote.styled footer::before {
 .link-arrow:hover { gap: 1rem; }
 .bg-dark .link-arrow { color: rgba(245,243,238,0.60); }
 .bg-dark .link-arrow:hover { color: var(--text-light); }
+
+/* ── Legal Document ───────────────────────────────────────── */
+.legal-doc {
+  max-width: 760px;
+}
+
+.legal-section {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+
+.legal-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.legal-heading {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.legal-body {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.legal-body:last-child { margin-bottom: 0; }
+
+.legal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.legal-list li {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.legal-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--bronze);
+}
+
+.legal-link {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--bronze);
+  transition: color 0.2s;
+}
+
+.legal-link:hover { color: var(--bronze); }
 
 @media (max-width: 640px) {
   .section { padding: 4rem 1.5rem; }
