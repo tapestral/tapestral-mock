@@ -327,6 +327,9 @@ a   { text-decoration: none; }
 .btn-light { background: var(--bg); color: var(--text); }
 .btn-light:hover { background: var(--bg-muted); }
 
+.btn-dark { background: var(--bg-dark); color: var(--text-light); }
+.btn-dark:hover { background: oklch(0.22 0.048 155); }
+
 .btn-ghost {
   border: 1px solid rgba(245, 243, 238, 0.30);
   color: var(--text-light);
@@ -473,6 +476,50 @@ a   { text-decoration: none; }
 }
 
 .bg-dark .card-body { color: rgba(245, 243, 238, 0.50); }
+
+.card-badge {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--bronze);
+  margin-bottom: 1rem;
+}
+
+.card-subitems {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.card-subitem {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.card-subitem:last-child { padding-bottom: 0; }
+
+.card-subitem-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.card-subitem-body {
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.bg-dark .card-subitem { border-color: rgba(255,255,255,0.10); }
+.bg-dark .card-subitem-label { color: var(--text-light); }
+.bg-dark .card-subitem-body { color: rgba(245,243,238,0.50); }
 
 @media (min-width: 768px) { .grid-cols-2 { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 768px) { .grid-cols-3 { grid-template-columns: repeat(3, 1fr); } }
