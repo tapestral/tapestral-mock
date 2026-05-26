@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4TVK733BFR"></script>
@@ -8,46 +7,36 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-4TVK733BFR');
     </script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
-    <!-- Primary Meta Tags -->
     <title>Furniture for Interior Designers - tapestral</title>
     <meta name="title" content="Furniture for Interior Designers - tapestral">
-    <meta name="description"
-        content="tapestral is a sourcing platform built for interior designers. Purchase directly from trusted vendors, get designer pricing, and simplify your workflow. Launching soon!">
+    <meta name="description" content="tapestral is a sourcing platform built for interior designers. Purchase directly from trusted vendors, get designer pricing, and simplify your workflow. Launching soon!">
     <meta name="author" content="tapestral">
     <meta name="robots" content="all">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.tapestral.com/index.html">
+    <link rel="canonical" href="https://www.tapestral.com/">
     <link rel="icon" href="https://www.tapestral.com/images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.tapestral.com/">
     <meta property="og:title" content="Furniture for Interior Designers - tapestral">
-    <meta property="og:description"
-        content="We’re crafting a better way for interior designers to source products directly from their favorite vendors. Request early access today.">
+    <meta property="og:description" content="We're crafting a better way for interior designers to source products directly from their favorite vendors.">
     <meta property="og:image" content="https://www.tapestral.com/images/tapestral_brand.png">
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.tapestral.com/">
     <meta property="twitter:title" content="Furniture for Interior Designers - tapestral">
-    <meta property="twitter:description"
-        content="A better way for interior designers to purchase from vendors. tapestral is launching soon.">
+    <meta property="twitter:description" content="A better way for interior designers to purchase from vendors. tapestral is launching soon.">
     <meta property="twitter:image" content="https://www.tapestral.com/images/tapestral_brand.png">
 
-    <!-- Structured Data / Schema.org -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -61,220 +50,224 @@
     </script>
 
     <link rel="stylesheet" href="style.css">
-    <style>
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .feature-card {
-            background: #fff;
-            border: 1px solid #c8d9d5;
-            border-radius: 12px;
-            padding: 2rem;
-            flex: 1 1 250px;
-            max-width: 300px;
-            box-shadow: 0 4px 12px rgba(20, 63, 56, 0.06);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: #1f4f47;
-        }
-
-        .feature-card p {
-            font-size: 1rem;
-            color: #555;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="site-wrapper">
-        <div class="hero-header">
-            <div class="hero-overlay">
-                <div class="hero-center">
-                    <h1 class="hero-title"><a href="index.html">tapestral</a></h1>
-                    <h2 class="hero-subtitle">Elevating design. Simplifying sourcing.</h2>
-                </div>
 
-                <!-- Desktop Nav -->
-                <nav class="hero-nav">
-                    <a href="about.html">About Us</a>
-                    <a href="why-tapestral.html">Why tapestral</a>
-                    <a href="designer-access.html">Designer access</a>
-                    <a href="become-a-vendor.html">Become a Vendor</a>
-                    <a href="#shipping">Shipping</a>
-                    <a href="terms-of-service.html">Terms of Service</a>
-                </nav>
+<!-- ── Navigation ────────────────────────────────────────── -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">tapestral</a>
+        <div class="nav-links">
+            <a href="about.html">About Us</a>
+            <a href="why-tapestral.html">Why tapestral</a>
+            <a href="designer-access.html">Designer Access</a>
+            <a href="become-a-vendor.html">Become a Vendor</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mobileNav" class="mobile-nav">
+            <a href="about.html">About Us</a>
+            <a href="why-tapestral.html">Why tapestral</a>
+            <a href="designer-access.html">Designer Access</a>
+            <a href="become-a-vendor.html">Become a Vendor</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+        </nav>
+    </div>
+</nav>
 
-                <!-- Mobile Nav -->
-                <button class="hamburger" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <nav id="mobileNav" class="mobile-nav">
-                    <a href="about.html">About Us</a>
-                    <a href="why-tapestral.html">Why tapestral</a>
-                    <a href="designer-access.html">Designer access</a>
-                    <a href="become-a-vendor.html">Become a Vendor</a>
-                    <a href="#shipping">Shipping</a>
-                    <a href="terms-of-service.html">Terms of Service</a>
-                </nav>
+<!-- ── Hero ──────────────────────────────────────────────── -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+        <div class="hero-inner">
+            <div class="eyebrow">
+                <div class="eyebrow-line"></div>
+                <span class="eyebrow-text">
+                    <span class="eyebrow-dot"></span>
+                    Launching soon, designer registration opening shortly
+                </span>
+            </div>
+            <h1>Elevating design.<br><em>Simplifying sourcing.</em></h1>
+            <p class="hero-desc">
+                tapestral streamlines how interior designers source furniture &mdash; connecting you to
+                curated manufacturers while simplifying selection, ordering, and project management.
+            </p>
+            <div class="hero-actions">
+                <a href="designer-access.html" class="btn btn-primary">
+                    Stay Informed
+                    <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="about.html" class="btn btn-outline">Our Story</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Stats Bar ─────────────────────────────────────────── -->
+<div class="stats-bar">
+    <div class="stats-inner">
+        <div class="stat"><span class="stat-label">Curated Products</span></div>
+        <div class="stat"><span class="stat-label">Vetted Vendors</span></div>
+        <div class="stat"><span class="stat-label">Designer Pricing</span></div>
+    </div>
+</div>
+
+<!-- ── Key Features ──────────────────────────────────────── -->
+<section class="section bg-light">
+    <div class="section-inner">
+        <div class="section-header will-reveal">
+            <span class="section-label">The difference</span>
+            <h2 class="section-title">Why Designers Choose tapestral</h2>
+        </div>
+
+        <div class="grid-border grid-cols-3 will-reveal">
+            <div class="grid-card">
+                <span class="card-num">01</span>
+                <h3 class="card-title">Designer Pricing</h3>
+                <p class="card-body">Access designer-only pricing with significant savings off retail across vetted furniture brands. No subscription fees, no credit card surcharges on ACH payments.</p>
+            </div>
+            <div class="grid-card">
+                <span class="card-num">02</span>
+                <h3 class="card-title">Trusted Vendors</h3>
+                <p class="card-body">We partner directly with manufacturers and makers interior designers already trust and work with. No gatekeepers, no middlemen, no surprises.</p>
+            </div>
+            <div class="grid-card">
+                <span class="card-num">03</span>
+                <h3 class="card-title">Built for Projects</h3>
+                <p class="card-body">Order confidently with transparent lead times, finish options, and complete spec sheets. Everything your project needs, in one place.</p>
+            </div>
+            <div class="grid-card">
+                <span class="card-num">04</span>
+                <h3 class="card-title">Flexible Freight</h3>
+                <p class="card-body">Your carrier or ours. Choose LTL freight or white glove delivery at checkout with live quotes, instant dispatch, and real-time tracking.</p>
+            </div>
+            <div class="grid-card">
+                <span class="card-num">05</span>
+                <h3 class="card-title">Order Transparency</h3>
+                <p class="card-body">Order acknowledgements, tracking updates, and downloadable documents all in your account. No chasing vendors by email.</p>
+            </div>
+            <div class="grid-card">
+                <span class="card-num">06</span>
+                <h3 class="card-title">No Hidden Fees</h3>
+                <p class="card-body">tapestral is free for interior designers. No subscription, no markup, no ACH processing fees. Designer pricing, exactly as advertised.</p>
             </div>
         </div>
 
-        <main>
-            <section style="padding: 4rem; text-align: center;">
-                <h2>Coming Soon</h2>
-                <p>We’re crafting a better way for interior designers to source products directly from their favorite
-                    vendors. Stay tuned for launch updates on tapestral.</p>
-            </section>
-
-            <section style="padding: 4rem 2rem; text-align: center;">
-                <h2 style="margin-bottom: 2rem;">Key Features</h2>
-                <div class="features">
-                    <div class="feature-card">
-                        <h3>Designer Pricing</h3>
-                        <p>Access designer pricing directly from vendors.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>No Cost to Use</h3>
-                        <p>tapestral is free for interior designers — no subscription fees.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Trusted Vendors</h3>
-                        <p>Purchase pieces from trusted vendors directly, ensuring quality and transparency.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Shipping Your Way</h3>
-                        <p>Choose LTL freight or white glove delivery at checkout — live quotes, instant dispatch, and real-time tracking backed by Averitt &amp; MyCarrier.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>No Credit Card Fees</h3>
-                        <p>We make payments easy with ACH processing — no hidden charges or extra costs.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Customer Focused Support</h3>
-                        <p>Our team is here to help whenever you need assistance with sourcing or orders.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Fast, Reliable Technology</h3>
-                        <p>Our platform is built for speed and stability, letting you browse and order seamlessly.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Secure Software</h3>
-                        <p>All transactions and data are protected with enterprise-grade security standards.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="shipping" class="shipping-section">
-                <div class="shipping-inner">
-                    <div class="partner-eyebrow">New Partnership</div>
-                    <h2 class="shipping-heading">Shipping Built for How You Work</h2>
-                    <p class="shipping-intro">
-                        Not every order ships the same way. Choose <strong>LTL freight</strong> for cost-effective
-                        pallet delivery, or <strong>white glove</strong> for premium inside placement — both with
-                        live quotes, instant dispatch, and full visibility. Powered by <strong>MyCarrier</strong>,
-                        backed by <strong>Averitt</strong>.
-                    </p>
-
-                    <div class="shipping-options">
-                        <div class="shipping-option">
-                            <div class="shipping-card-label">LTL Freight</div>
-                            <p>Cost-effective shared-truck delivery for large shipments. Get live rates across top carriers and dispatch with auto-generated BOLs — no broker markups, no guesswork on price.</p>
-                        </div>
-                        <div class="shipping-option-divider">or</div>
-                        <div class="shipping-option">
-                            <div class="shipping-card-label">White Glove</div>
-                            <p>Premium inside delivery with careful placement handled by trained crews. The right choice when your client's pieces demand more than a curbside drop.</p>
-                        </div>
-                    </div>
-
-                    <div class="shipping-features">
-                        <div class="shipping-card">
-                            <div class="shipping-card-label">Real-Time Quotes</div>
-                            <p>See live rates and transit times before you commit — know the full cost upfront.</p>
-                        </div>
-                        <div class="shipping-card">
-                            <div class="shipping-card-label">Instant Dispatch</div>
-                            <p>Auto-generated BOLs, PRO numbers, and labels the moment you're ready. No paperwork.</p>
-                        </div>
-                        <div class="shipping-card">
-                            <div class="shipping-card-label">Live Tracking</div>
-                            <p>Know where your clients' pieces are at all times and send automatic status updates.</p>
-                        </div>
-                        <div class="shipping-card">
-                            <div class="shipping-card-label">Freight Audit</div>
-                            <p>Discrepancies flagged automatically before they hit your invoice. Total cost control.</p>
-                        </div>
-                    </div>
-                    <p class="shipping-powered">Backed by <strong>Averitt</strong> &amp; <strong>MyCarrier</strong></p>
-                </div>
-            </section>
-
-            <section class="cta-section">
-                <h2>Are you a Designer?</h2>
-                <p>Request to be notified when tapestral is officaly launched!</p>
-                <a href="designer-access.html" class="cta-button">Stay Informed</a>
-            </section>
-
-            <section class="cta-section">
-                <h2>Are you a Vendor?</h2>
-                <p>Jump in and start hosting your pieces</p>
-                <a href="become-a-vendor.html" class="cta-button">Become a Vendor</a>
-            </section>
-
-            <section class="cta-section">
-                <h2>Learn More About tapestral</h2>
-                <p>We’re building a platform to simplify sourcing for interior designers. Read about our mission and our
-                    founders.</p>
-                <a href="about.html" class="cta-button">About Us</a>
-            </section>
-
-
-            <footer class="footer">
-                <div class="footer-content">
-                    <div class="footer-links">
-                        <a href="about.html">About Us</a>
-                        <a href="why-tapestral.html">Why tapestral</a>
-                        <a href="designer-access.html">Designer access</a>
-                        <a href="become-a-vendor.html">Become a Vendor</a>
-                        <a href="terms-of-service.html">Terms of Service</a>
-                    </div>
-                    <div class="footer-copy">
-                        &copy; <span id="year"></span> tapestral. All rights reserved.
-                    </div>
-                </div>
-            </footer>
-        </main>
+        <div class="mt-md center will-reveal">
+            <a href="why-tapestral.html" class="link-arrow">
+                See why designers and vendors choose tapestral
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
     </div>
+</section>
 
-    <script>
-        // Year auto-update
-        document.getElementById("year").textContent = new Date().getFullYear();
+<!-- ── Shipping Section ───────────────────────────────────── -->
+<section class="section bg-dark">
+    <div class="section-inner">
+        <div class="section-header will-reveal">
+            <span class="section-label">New Partnership</span>
+            <h2 class="section-title">Shipping Built for How You Work</h2>
+            <p class="section-body mt-sm">
+                Not every order ships the same way. Choose <strong>LTL freight</strong> for cost-effective
+                pallet delivery, or <strong>white glove</strong> for premium inside placement &mdash; both
+                backed by <strong>Averitt</strong>.
+            </p>
+        </div>
 
-        // Toggle mobile nav
-        function toggleMenu() {
-            const nav = document.getElementById("mobileNav");
-            const burger = document.querySelector(".hamburger");
+        <div class="grid-border grid-cols-2 will-reveal">
+            <div class="grid-card">
+                <span class="card-num">01</span>
+                <h3 class="card-title">LTL Freight</h3>
+                <p class="card-body">Cost-effective shared-truck delivery for larger shipments. Best for pieces that ship on a pallet to a dock or residential address. Live quotes, instant dispatch, auto-generated BOLs.</p>
+            </div>
+            <div class="grid-card">
+                <span class="card-num">02</span>
+                <h3 class="card-title">White Glove</h3>
+                <p class="card-body">Premium inside delivery with careful placement by trained crews. The right choice when your client's pieces require more than a curbside drop. Full tracking, full care.</p>
+            </div>
+            <div class="grid-card">
+                <span class="card-num">03</span>
+                <h3 class="card-title">Bring Your Own Carrier</h3>
+                <p class="card-body">Prefer your existing freight relationship? Select your carrier at checkout. You arrange pickup &mdash; we get out of the way. Full flexibility, your terms.</p>
+            </div>
+            <div class="grid-card">
+                <span class="card-num">04</span>
+                <h3 class="card-title">Real-Time Tracking</h3>
+                <p class="card-body">Know where your clients' pieces are at all times. Automatic status updates, freight audit flags, and complete documentation in your account.</p>
+            </div>
+        </div>
 
-            nav.classList.toggle("open");
-            burger.classList.toggle("active");
-        }
-    </script>
+        <p class="mt-md center" style="font-size:0.78rem;color:rgba(245,243,238,0.4);letter-spacing:0.04em;">Backed by <strong style="color:rgba(245,243,238,0.65)">Averitt</strong></p>
+    </div>
+</section>
+
+<!-- ── Editorial Banner ───────────────────────────────────── -->
+<section class="editorial">
+    <div class="editorial-bg"></div>
+    <div class="editorial-overlay"></div>
+    <div class="editorial-content will-reveal">
+        <div class="editorial-rule"></div>
+        <h2>Built for the way<br><em>designers source</em></h2>
+        <p>Curated vendors. Transparent pricing. No retail markup.</p>
+        <a href="designer-access.html" class="btn btn-primary">
+            Stay Informed
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+    </div>
+</section>
+
+<!-- ── Join the Network ───────────────────────────────────── -->
+<section class="section bg-dark">
+    <div class="section-inner">
+        <div class="cta-split">
+            <div class="cta-text will-reveal">
+                <div class="bronze-rule"></div>
+                <h2>Join the tapestral<br><em>network</em></h2>
+                <p>Exclusive access for interior designers and trusted vendors. No subscription required.</p>
+            </div>
+            <div class="cta-actions will-reveal">
+                <a href="designer-access.html" class="btn btn-light">
+                    Apply as a Designer
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="become-a-vendor.html" class="btn btn-ghost">Become a Vendor</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Footer ────────────────────────────────────────────── -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="why-tapestral.html">Why tapestral</a>
+            <a href="designer-access.html">Designer Access</a>
+            <a href="become-a-vendor.html">Become a Vendor</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+        <div class="footer-copy">&copy; <span id="year"></span> tapestral. All rights reserved.</div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function toggleMenu() {
+        document.getElementById("mobileNav").classList.toggle("open");
+        document.querySelector(".hamburger").classList.toggle("active");
+    }
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.will-reveal').forEach(el => observer.observe(el));
+</script>
 </body>
-
 </html>
